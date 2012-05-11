@@ -1,11 +1,11 @@
 OSPFN Manual
-v0.1.0
+v0.2.0
 
-Copyright (c) 2011, University of Memphis and University of Arizona.
-Release Date: 09/30/2011
+Copyright (c) 2012, University of Memphis and University of Arizona.
+Release Date: 05/11/2012
 
 OSPFN is a routing software package for Named Data Networking (NDN) based 
-on Quagga.  This manual covers OSPFN v0.1.0.
+on Quagga.  This manual covers OSPFN v0.2.0.
 
 1. About OSPFN
 2. Distribution 
@@ -41,7 +41,7 @@ University of Arizona. Technical questions should be directed to
 Cheng Yi <yic@EMAIL.ARIZONA.EDU> and A K M Mahmudul Hoque <ahoque1@memphis.edu>. 
 Source code can be downloaded from github by running the following:
 
-$ git clone git://github.com/NDN-Routing/OSPFN.git
+$ git clone git://github.com/NDN-Routing/OSPFN2.0.git
 
 
 ==================================
