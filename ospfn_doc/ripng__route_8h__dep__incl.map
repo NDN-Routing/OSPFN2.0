@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ripng__nexthop_8h.html" title="ripngd/ripng_nexthop.h" alt="" coords="188,80,351,107"/>
+<area shape="rect" id="node9" href="$ripngd_8c.html" title="ripngd/ripngd.c" alt="" coords="355,155,467,181"/>
+<area shape="rect" id="node11" href="$ripng__route_8c.html" title="ripngd/ripng_route.c" alt="" coords="441,80,583,107"/>
+<area shape="rect" id="node5" href="$ripng__nexthop_8c.html" title="ripngd/ripng_nexthop.c" alt="" coords="5,155,168,181"/>
+<area shape="rect" id="node7" href="$ripng__peer_8c.html" title="ripngd/ripng_peer.c" alt="" coords="192,155,331,181"/>
+</map>

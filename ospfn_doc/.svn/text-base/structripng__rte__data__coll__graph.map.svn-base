@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$structripng__aggregate.html" title="ripng_aggregate" alt="" coords="5,293,128,320"/>
+<area shape="rect" id="node4" href="$structripng__info.html" title="ripng_info" alt="" coords="269,293,349,320"/>
+<area shape="rect" id="node6" href="$structroute__node.html" title="route_node" alt="" coords="159,188,251,215"/>
+<area shape="rect" id="node11" href="$structroute__table.html" title="route_table" alt="" coords="153,293,244,320"/>
+<area shape="rect" id="node8" href="$structprefix.html" title="prefix" alt="" coords="177,96,233,123"/>
+<area shape="rect" id="node14" href="$structthread.html" title="thread" alt="" coords="431,188,492,215"/>
+<area shape="rect" id="node23" href="$structthread__list.html" title="thread_list" alt="" coords="387,293,473,320"/>
+<area shape="rect" id="node17" href="$structcpu__thread__history.html" title="cpu_thread_history" alt="" coords="392,96,531,123"/>
+<area shape="rect" id="node19" href="$structcpu__thread__history_1_1time__stats.html" title="cpu_thread_history::time_stats" alt="" coords="356,5,567,32"/>
+<area shape="rect" id="node21" href="$structthread__master.html" title="thread_master" alt="" coords="413,472,523,499"/>
+</map>

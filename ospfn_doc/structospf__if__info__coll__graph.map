@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$structospf__if__params.html" title="ospf_if_params" alt="" coords="5,5,120,32"/>
+<area shape="rect" id="node4" href="$structroute__table.html" title="route_table" alt="" coords="199,5,291,32"/>
+<area shape="rect" id="node6" href="$structroute__node.html" title="route_node" alt="" coords="266,111,357,137"/>
+<area shape="rect" id="node8" href="$structprefix.html" title="prefix" alt="" coords="339,5,396,32"/>
+</map>

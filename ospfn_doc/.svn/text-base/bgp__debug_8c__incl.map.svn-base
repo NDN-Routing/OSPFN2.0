@@ -1,0 +1,23 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$zebra_8h.html" title="zebra.h" alt="" coords="1540,80,1607,107"/>
+<area shape="rect" id="node59" href="$str_8h.html" title="str.h" alt="" coords="2726,155,2775,181"/>
+<area shape="rect" id="node61" href="$version_8h.html" title="lib/version.h" alt="" coords="2607,80,2701,107"/>
+<area shape="rect" id="node63" href="$prefix_8h.html" title="prefix.h" alt="" coords="2902,155,2969,181"/>
+<area shape="rect" id="node65" href="$sockunion_8h.html" title="sockunion.h" alt="" coords="2817,229,2911,256"/>
+<area shape="rect" id="node67" href="$linklist_8h.html" title="linklist.h" alt="" coords="2902,80,2972,107"/>
+<area shape="rect" id="node69" href="$stream_8h.html" title="stream.h" alt="" coords="2997,80,3072,107"/>
+<area shape="rect" id="node72" href="$command_8h.html" title="command.h" alt="" coords="3147,80,3239,107"/>
+<area shape="rect" id="node80" href="$log_8h.html" title="log.h" alt="" coords="3271,229,3323,256"/>
+<area shape="rect" id="node88" href="$bgpd_8h.html" title="bgpd/bgpd.h" alt="" coords="2726,80,2825,107"/>
+<area shape="rect" id="node91" href="$bgp__aspath_8h.html" title="bgpd/bgp_aspath.h" alt="" coords="3315,80,3455,107"/>
+<area shape="rect" id="node93" href="$bgp__route_8h.html" title="bgpd/bgp_route.h" alt="" coords="3480,80,3611,107"/>
+<area shape="rect" id="node97" href="$bgp__attr_8h.html" title="bgpd/bgp_attr.h" alt="" coords="3697,155,3817,181"/>
+<area shape="rect" id="node99" href="$bgp__debug_8h.html" title="bgpd/bgp_debug.h" alt="" coords="3635,80,3773,107"/>
+<area shape="rect" id="node102" href="$bgp__community_8h.html" title="bgpd/bgp_community.h" alt="" coords="3848,80,4013,107"/>
+<area shape="rect" id="node57" href="$zassert_8h.html" title="zassert.h" alt="" coords="1739,155,1816,181"/>
+<area shape="rect" id="node74" href="$vector_8h.html" title="vector.h" alt="" coords="3143,155,3215,181"/>
+<area shape="rect" id="node76" href="$vty_8h.html" title="vty.h" alt="" coords="3239,155,3291,181"/>
+<area shape="rect" id="node83" href="$route__types_8h.html" title="lib/route_types.h" alt="" coords="2994,155,3117,181"/>
+<area shape="rect" id="node78" href="$thread_8h.html" title="thread.h" alt="" coords="3175,229,3247,256"/>
+<area shape="rect" id="node95" href="$bgp__table_8h.html" title="bgp_table.h" alt="" coords="3498,155,3592,181"/>
+</map>

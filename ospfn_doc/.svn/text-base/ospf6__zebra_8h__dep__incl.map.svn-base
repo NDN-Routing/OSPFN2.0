@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$ospf6__asbr_8c.html" title="ospf6d/ospf6_asbr.c" alt="" coords="5,80,149,107"/>
+<area shape="rect" id="node5" href="$ospf6__top_8c.html" title="ospf6d/ospf6_top.c" alt="" coords="174,80,313,107"/>
+<area shape="rect" id="node7" href="$ospf6__zebra_8c.html" title="ospf6d/ospf6_zebra.c" alt="" coords="339,80,491,107"/>
+<area shape="rect" id="node9" href="$ospf6d_8c.html" title="ospf6d/ospf6d.c" alt="" coords="515,80,635,107"/>
+</map>

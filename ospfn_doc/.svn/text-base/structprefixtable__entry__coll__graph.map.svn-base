@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$structorigin__entry.html" title="origin_entry" alt="" coords="5,5,99,32"/>
+<area shape="rect" id="node5" href="$structnexthop__entry.html" title="nexthop_entry" alt="" coords="181,5,291,32"/>
+<area shape="rect" id="node8" href="$structname__prefix.html" title="name_prefix" alt="" coords="373,5,469,32"/>
+</map>

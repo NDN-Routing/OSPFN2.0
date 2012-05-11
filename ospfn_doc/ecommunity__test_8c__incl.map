@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$zebra_8h.html" title="zebra.h" alt="" coords="1345,80,1412,107"/>
+<area shape="rect" id="node61" href="$vty_8h.html" title="vty.h" alt="" coords="2813,80,2864,107"/>
+<area shape="rect" id="node68" href="$stream_8h.html" title="stream.h" alt="" coords="2889,80,2964,107"/>
+<area shape="rect" id="node74" href="$privs_8h.html" title="privs.h" alt="" coords="2989,80,3051,107"/>
+<area shape="rect" id="node76" href="$memory_8h.html" title="memory.h" alt="" coords="3076,80,3159,107"/>
+<area shape="rect" id="node80" href="$bgpd_8h.html" title="bgpd/bgpd.h" alt="" coords="3183,80,3283,107"/>
+<area shape="rect" id="node83" href="$bgp__ecommunity_8h.html" title="bgpd/bgp_ecommunity.h" alt="" coords="3308,80,3481,107"/>
+<area shape="rect" id="node57" href="$zassert_8h.html" title="zassert.h" alt="" coords="2623,155,2700,181"/>
+<area shape="rect" id="node59" href="$str_8h.html" title="str.h" alt="" coords="2725,155,2773,181"/>
+<area shape="rect" id="node63" href="$thread_8h.html" title="thread.h" alt="" coords="2799,155,2871,181"/>
+<area shape="rect" id="node65" href="$log_8h.html" title="log.h" alt="" coords="2895,155,2947,181"/>
+<area shape="rect" id="node70" href="$prefix_8h.html" title="prefix.h" alt="" coords="2971,155,3039,181"/>
+<area shape="rect" id="node72" href="$sockunion_8h.html" title="sockunion.h" alt="" coords="3067,229,3160,256"/>
+<area shape="rect" id="node78" href="$memtypes_8h.html" title="lib/memtypes.h" alt="" coords="3064,155,3179,181"/>
+</map>

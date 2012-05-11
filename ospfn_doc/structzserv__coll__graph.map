@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$structstream.html" title="stream" alt="" coords="5,201,69,228"/>
+<area shape="rect" id="node5" href="$structthread.html" title="thread" alt="" coords="288,201,349,228"/>
+<area shape="rect" id="node14" href="$structthread__list.html" title="thread_list" alt="" coords="386,323,472,349"/>
+<area shape="rect" id="node8" href="$structcpu__thread__history.html" title="cpu_thread_history" alt="" coords="267,96,405,123"/>
+<area shape="rect" id="node10" href="$structcpu__thread__history_1_1time__stats.html" title="cpu_thread_history::time_stats" alt="" coords="231,5,441,32"/>
+<area shape="rect" id="node12" href="$structthread__master.html" title="thread_master" alt="" coords="298,501,408,528"/>
+<area shape="rect" id="node17" href="$structbuffer.html" title="buffer" alt="" coords="151,201,208,228"/>
+<area shape="rect" id="node19" href="$structbuffer__data.html" title="buffer_data" alt="" coords="95,96,185,123"/>
+</map>

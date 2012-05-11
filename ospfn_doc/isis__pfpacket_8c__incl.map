@@ -1,0 +1,20 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$zebra_8h.html" title="zebra.h" alt="" coords="1345,80,1412,107"/>
+<area shape="rect" id="node65" href="$log_8h.html" title="log.h" alt="" coords="2765,80,2816,107"/>
+<area shape="rect" id="node68" href="$stream_8h.html" title="stream.h" alt="" coords="2841,80,2916,107"/>
+<area shape="rect" id="node74" href="$if_8h.html" title="if.h" alt="" coords="2940,80,2980,107"/>
+<area shape="rect" id="node78" href="$dict_8h.html" title="isisd/dict.h" alt="" coords="3005,80,3091,107"/>
+<area shape="rect" id="node82" href="$iso_8h.html" title="isisd/include&#45;netbsd/iso.h" alt="" coords="3116,80,3292,107"/>
+<area shape="rect" id="node88" href="$isis__constants_8h.html" title="isisd/isis_constants.h" alt="" coords="3317,80,3467,107"/>
+<area shape="rect" id="node90" href="$isis__common_8h.html" title="isisd/isis_common.h" alt="" coords="3491,80,3633,107"/>
+<area shape="rect" id="node92" href="$isis__circuit_8h.html" title="isisd/isis_circuit.h" alt="" coords="3658,80,3784,107"/>
+<area shape="rect" id="node94" href="$isis__flags_8h.html" title="isisd/isis_flags.h" alt="" coords="3809,80,3929,107"/>
+<area shape="rect" id="node96" href="$isisd_8h.html" title="isisd/isisd.h" alt="" coords="3954,80,4045,107"/>
+<area shape="rect" id="node98" href="$isis__network_8h.html" title="isisd/isis_network.h" alt="" coords="4070,80,4209,107"/>
+<area shape="rect" id="node100" href="$privs_8h.html" title="privs.h" alt="" coords="4234,80,4296,107"/>
+<area shape="rect" id="node57" href="$zassert_8h.html" title="zassert.h" alt="" coords="2572,155,2649,181"/>
+<area shape="rect" id="node59" href="$str_8h.html" title="str.h" alt="" coords="2674,155,2723,181"/>
+<area shape="rect" id="node70" href="$prefix_8h.html" title="prefix.h" alt="" coords="2845,155,2912,181"/>
+<area shape="rect" id="node72" href="$sockunion_8h.html" title="sockunion.h" alt="" coords="2832,229,2925,256"/>
+<area shape="rect" id="node76" href="$linklist_8h.html" title="linklist.h" alt="" coords="2937,155,3007,181"/>
+</map>

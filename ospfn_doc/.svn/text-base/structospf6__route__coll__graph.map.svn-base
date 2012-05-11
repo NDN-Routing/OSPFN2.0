@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$structospf6__nexthop.html" title="ospf6_nexthop" alt="" coords="5,280,120,307"/>
+<area shape="rect" id="node4" href="$structprefix.html" title="prefix" alt="" coords="165,5,221,32"/>
+<area shape="rect" id="node10" href="$structroute__node.html" title="route_node" alt="" coords="215,97,307,124"/>
+<area shape="rect" id="node6" href="$structospf6__route__table.html" title="ospf6_route_table" alt="" coords="195,280,328,307"/>
+<area shape="rect" id="node8" href="$structroute__table.html" title="route_table" alt="" coords="222,189,313,216"/>
+<area shape="rect" id="node17" href="$structospf6__path.html" title="ospf6_path" alt="" coords="409,280,500,307"/>
+<area shape="rect" id="node19" href="$structospf6__ls__origin.html" title="ospf6_ls_origin" alt="" coords="403,189,516,216"/>
+</map>

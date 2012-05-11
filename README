@@ -1,0 +1,453 @@
+OSPFN Manual
+v0.1.0
+
+Copyright (c) 2011, University of Memphis and University of Arizona.
+Release Date: 09/30/2011
+
+OSPFN is a routing software package for Named Data Networking (NDN) based 
+on Quagga.  This manual covers OSPFN v0.1.0.
+
+1. About OSPFN
+2. Distribution 
+3. OS Support
+4. Requirements
+5. Installation
+6. Configuration
+7. Running
+8. Checking OSPFN
+9. OSPFN Log
+10. Stopping ospfn
+11. Stopping ccnd, zebra, ospfd
+12. Contributors
+
+
+
+==================================
+1. About OSPFN
+==================================
+OSPFN has been developed by the University of Memphis and the University of 
+Arizona for supporting the paradigm shift in networking from IP to Named 
+Data Networking (NDN).  It is an adaptation of the OSPF protocol implemented 
+using the open source routing suite Quagga.  OSPFN uses OSPF's Opaque LSA 
+capability to announce name prefixes and update the FIB of CCNx.  OSPFN 
+is in its early stage of development. Feedback and bug reports are welcome.
+
+
+==================================
+2. Distribution
+==================================
+Currently OSPFN v0.1.0 is distributed by the University of Memphis and the
+University of Arizona. Technical questions should be directed to 
+Cheng Yi <yic@EMAIL.ARIZONA.EDU> and A K M Mahmudul Hoque <ahoque1@memphis.edu>. 
+Source code can be downloaded from github by running the following:
+
+$ git clone git://github.com/NDN-Routing/OSPFN.git
+
+
+==================================
+3. OS Support
+==================================
+The current release was developed and tested on Ubuntu 10.04, 10.10, 11.04 
+and Fedora 9. Other Unix variants may also work, but have not been tested yet.
+
+
+==================================
+4. Requirements
+==================================
+CCNx needs to be installed first.  CCNx can be obtained from
+http://www.ccnx.org/software-download-information-request/download-releases/. 
+
+Requirements for CCNx as well as installation instructions can be found in 
+the README file in the CCNx package.  Typical installation steps for CCNx 
+are as follows:
+
+$ ./configure
+$ make
+$ sudo make install
+
+CCNx v0.4.0 was used for testing and development.
+
+
+==================================
+5. Installation
+==================================
+Check out the OSPFN source code.  You should now have a directory "OSPFN"
+
+Before running configure, the permissions on the OSPFN may need to be changed. Once that has been done, run configure with the following options:
+
+$ ./configure --enable-opaque-lsa --disable-ipv6 --disable-ripd --disable-ripngd --disable-ospf6d --disable-bgpd --disable-bgp-announce --sysconfdir=/usr/local/etc/quagga --localstatedir=/var/run/quagga-state
+
+Notes:
+
+(a) here we specify the quagga configuration and state file directories in 
+configure using the --sysconfdir and --localstatedir options, respectively. 
+We assume /usr/local/etc/quagga and /var/run/quagga-state are used.
+You can specify other directories.
+
+(b) the --disable options are to avoid compiling Quagga components that we 
+do not need.
+
+A user named quagga needs to be created:
+
+$ sudo addusr quagga
+
+Next we need to create two directories: /usr/local/etc/quagga 
+and /var/run/quagga-state (or any directories you specified in configure).
+Both directories must be readable and writable by the user quagga and 
+group quagga.
+
+$ cd /usr/local/etc/
+$ sudo mkdir quagga
+$ sudo chown quagga:quagga quagga
+$ sudo chmod g+w quagga
+$ cd /var/run
+$ sudo mkdir quagga-state
+$ sudo chown quagga:quagga quagga-state
+$ sudo chmod g+w quagga-state
+
+Now we can compile and install the programs.
+
+$ cd OSPFN
+$ make
+$ sudo make install
+
+
+Note: In some OS /var/run is not persistent ie after restart /var/run/quagga-state directory disappear. To get around this problem one can create directory in persistent partition and change localstatedir=/var/run/quagga-state to
+localstatedir = /directory/path/to/quagga-state. Or someone can also make /var/run/qugga-state persistent by setting appropriate permissions in /etc/rc.local.
+
+==================================
+6. Configuration
+==================================
+
+6.1 Get IP Addresses for GRE Tunnels
+
+On the NDN testbed, each site is allocated a /24 block out of 10.0.0.0/8 
+for setting up GRE tunnels for OSPFN traffic.  Please contact Colorado 
+State University about which /24 block your site can use. Within each site, 
+you can allocate addresses from your site /24 block to multiple tunnels 
+or multiple OSPFN nodes as you wish.
+
+
+6.2 Set Up GRE Tunnels
+
+If two OSPFN routers are not physically connected, a GRE tunnel between 
+the routers is needed.  Note that you need to make sure your firewall 
+allows GRE traffic to pass through.
+
+We use the following topology to show how to set up a GRE tunnel
+between netlogic.cs.memphis.edu and hobo.cs.arizona.edu.  Netlogic's 
+public IP is 141.225.11.150 and private tunnel IP is 10.0.1.10.
+Hobo's public IP is 150.135.82.77 and private tunnel IP is 10.0.1.9. 
+
+
+Public IP: 141.225.11.150                    Public IP:150.135.82.77
+________________________  10.0.1.10  10.0.1.9 ___________________
+|netlogic.cs.memphis.edu |___________________|hobo.cs.arizona.edu|
+------------------------                      -------------------
+
+
+6.2.1 GRE Tunnel Configuration in Ubuntu
+
+Install the GRE module:
+
+$ sudo modprobe ip_gre
+
+Add the following to /etc/network/interfaces on netlogic.cs.memphis.edu:
+
+auto netlogictohobo 
+netlogictohobo inet static
+address 10.0.1.10
+netmask 255.255.255.252
+pre-up iptunnel add netlogictohobo mode gre local 141.225.11.150 remote 150.135.82.77 ttl 255 
+pointopoint 10.0.1.9
+up ifconfig netlogictohobo multicast
+
+Note that "netlogictohobo" is the name that you give to the tunnel interface.
+
+Similary, add the following to the /etc/network/interfaces file on hobo.cs.arizona.edu:
+
+auto hobotonetlogic
+iface hobotonetlogic inet static
+address 10.0.1.9
+netmask 255.255.255.252
+pre-up iptunnel add hobotonetlogic mode gre local 150.135.82.77 remote 141.225.11.150 ttl 255 
+pointopoint 10.0.1.10
+up ifconfig hobotonetlogic multicast
+
+Restart networking:
+$ sudo /etc/init.d/networking restart
+
+The command "ifconfig -a" should list the new tunnel interface.  If the 
+GRE tunnel is set up correctly, pinging the other end's private IP should work.
+
+
+6.2.2 GRE tunnel configuration in Fedora
+
+On netlogic.cs.memphis.edu:
+
+Create a file /etc/sysconfig/networking/devices/ifcfg-netlogictohobo, 
+with content:
+
+DEVICE=netlogictohobo
+TYPE=GRE
+ONBOOT=yes
+MY_INNER_IPADDR=10.0.1.10
+MY_OUTER_IPADDR=141.225.11.150
+PEER_INNER_IPADDR=10.0.1.9/30
+PEER_OUTER_IPADDR=150.135.82.77
+BOOTPROTO=none
+TTL=64
+
+Create hard links /etc/sysconfig/network-scripts/ifcfg-netlogictohobo and 
+/etc/sysconfig/networking/profiles/default/ifcfg-netlogictohobo 
+to /etc/sysconfig/networking/devices/ifcfg-netlogictohobo
+
+Bring up the interface:
+$ sudo ifup netlogictohobo
+
+Similar configurations should be created on hobo.cs.arizona.edu.
+
+The command "ifconfig -a" should list the new tunnel interface.  If the 
+GRE tunnel is set up correctly, pinging the other end's private IP should work.
+
+
+6.3 Quagga Configuration
+
+The OSPFN source code includes the Quagga 0.99.17 code, so no separate 
+installation of Quagga is needed, but you do need configure it. Instructions 
+are available at http://www.quagga.net/docs.php.
+
+By default, the Quagga configuration file ospfd.conf is located at 
+/usr/local/etc/, but we have specified our own directory 
+/usr/local/etc/quagga.  The user should copy ospfd.conf.sample to ospfd.conf 
+in the same directory and modify the ospfd.conf file as necessary.
+Same for zebra.conf.
+
+A sample configuration file (ospfd.conf) for Quagga OSPF would look like 
+below for netlogic.cs.memphis.edu:
+
+!
+! OSPF configuration saved from vty
+!   2011/09/07 14:12:35
+!
+hostname netlogic.cs.memphis.edu 
+password pwd
+enable password pwd 
+log file /var/log/quagga/ospfd.log
+!
+!
+!
+interface netlogictohobo
+ description link to hobo.cs.arizona.edu
+!
+access-list ospfn permit 10.0.0.0/8
+access-list ospfn deny any
+!
+router ospf
+ ospf router-id 141.225.11.150 
+ redistribute connected
+ distribute-list ospfn out connected   
+ network 10.0.1.8/30 area 0.0.0.0 
+ capability opaque
+!
+line vty
+!
+!end of configuration file here
+
+--------------------------------
+Notes:
+
+1. We are using the "redistribute connected" command to make the OSPF 
+router an ASBR, so that we can retrieve the next hops to other routers 
+from OSPFd. This is a temporary work-around until we find a better 
+solution.  To prevent potential looping caused by the "redistribute 
+connected" command, we are filtering out any prefixes that do not belong 
+to the NDN testbed using the "access-list" commands, which only 
+permit routes to 10.0.0.0/8 networks to be advertised. 
+
+2. Router id: we are using the public IP of each router as its router 
+ID to ensure uniqueness across the whole network.
+
+3. The log directory (/var/log/quagga in the example) must be readable 
+and writable by user quagga and group quagga.
+
+
+6.4 OSPFN Configuration
+
+By default, OSPFN looks for the configuration file ospfn.conf in the 
+local directory.  Users can also supply a configuration file name when 
+starting OSPFN. Configuration commands are entered one command per line 
+into the configuration file.  Currently OSPFN supports two commands, 
+ccnname and logdir. The ccnname command specifies name prefixes 
+(in URI format) advertised by the router. The logdir command specifies a 
+directory to write log files to.
+
+1. ccnname name_prefix op_id
+
+name_prefix : a name prefix, in URI format, to be advertised by this router.
+op_id : the desired ID for this name LSA.  The op_id must be unique among 
+the name prefixes advertised by the same router. 
+
+2. logdir dir
+
+dir : directory to write log files to
+
+A sample configuration file may contain the following commands:
+
+ccnname /ndn/memphis.edu/netlab/ 1
+ccnname /ndn/memphis.edu/cs/ 2
+logdir /var/log/ospfnlog/
+
+Note that the log directory must be readable and writable by the user
+that runs ospfn.
+
+3. multipath-order a.b.c.d pre_order
+
+Configure ospfn to add multipath for prefixes announced by other routers based
+on the pref_order. Higher the value higher the preference.But highest preference
+is given to the actual next hop from ospfd calculation. As an example if 
+configuration has following line for multipath-order
+
+multipath-order a.b.c.d 30
+multipath-order x.y.z.1 15
+multipath-order x.y.z.9 40
+
+ospfn get nexthop for /ndn/example/prefix is a.b.c.d no ospfn will add fib entry
+in the following order
+
+/ndn/example/prefix x.y.z.1
+/ndn/example/prefix x.y.z.9
+/ndn/example/prefix  a.b.c.d
+
+NB: ccnd give highest preference to the face added last.
+
+==================================
+7. Running OSPFN
+==================================
+
+First start zebra so that ospfd can acquire needed interface information. 
+Next start ospfd and ccnd, and then start ospfn.  The commands needed are 
+shown below:
+
+$ sudo zebra -d
+    
+$ sudo ospfd -d -a
+    
+$ ccndstart   
+    
+$ ospfn
+
+ospfn can also take several command-line options:
+
+-f/F file_name: specify the configuration file.  
+    (if this option is not included, OSPFN will look for the default 
+     file named ospfn.conf in the current directory)
+-d: OSPFN will run in daemon mode.
+-h: OSPFN will print out the usage information for ospfn running options
+-n: OSPFN will not write log information
+
+
+==================================
+8. Checking OSPFN
+==================================
+One can check whether OSPFN is working correctly by checking the FIB 
+entries of the nodes in the network.  For example, assume 
+netlogic.cs.memphis.edu and hobo.cs.arizona.edu are running OSPFN:
+
+Netlogic declares the following name prefixes in its configuration file:
+
+ccnname /ndn/memphis.edu/netlab/netlogic 1
+ccnname /ndn/memphis.edu/netlab/ospfn 2
+
+Hobo declares the following name prefixes in its configuration file:
+
+ccnname /ndn/arizona.edu/hobo/name1 1
+ccnname /ndn/arizona.edu/hobo/name2 2
+
+If OSPFN is running successfully, Netlogic's advertised name prefixes 
+located in its configuration file should be found in Hobo's FIB. 
+Likewise, Hobo's advertised name prefixes should be found in Netlogic's 
+FIB. Each FIB can be checked in a browser at http://<DNS name or address>:9695 
+(eg: http://netlogic.cs.memphis.edu:9695) or http://localhost:9695.
+
+A node's OSPFd routing table can also be checked to see if it has correct 
+routes to all other router's address prefixes:
+
+(1) connect to ospfd by typing the following command in terminal:
+
+$ telnet localhost ospfd
+
+(2) provide password configured in ospfd.conf
+
+(3) type the following command:
+    
+$show ip ospf route
+
+
+==================================
+9. OSPFN Log
+==================================
+
+OSPFN creates a detailed log for every run of OSPFN in the directory 
+configured by the ospfn configuration file.  Log file 
+names are of the format yyyymmddhhmmss.log.  If the "logdir" 
+command is not specified in the configuration file, OSPFN will
+by default create a directory named ospfnLog in the user's home 
+directory and write the log files there.
+
+
+==================================
+10. Stopping ospfn 
+==================================
+
+For stopping ospfn type ospfnstop in terminal.
+
+$ospfnstop
+
+ospfnstop will take a while to get response from ospfn and delete all the
+fib entries by ospfn. After deleting the fib entries ospfn will stop and
+ospfnstop will exit itself. 
+
+A precautious measure is to always restart all 4 daemons: zebra, ospfd, ccnd, ospfn.
+
+==================================
+11. Stopping ccnd, zebra, ospfd 
+==================================
+
+Stopping ccnd: stop ccnd by typping into terminal 
+ $ccndstop
+
+Stopping zebra: Kill zebra process by finding its process id, One can find process id 
+by typing into terminal 
+ $ ps -eaf | grep zebra
+
+Then you will find result like below 
+
+quagga    2786     1  0 Oct09 ?        00:00:00 zebra -d
+
+After that type into terminal
+ $kill 2786
+
+Stopping ospfd: Kill zebra process by finding its process id, One can find process id 
+by typing into terminal 
+ $ ps -eaf | grep ospfd
+
+Then you will find result like below 
+
+quagga    2788     1  0 Oct09 ?        00:00:00 ospfd -d -a
+
+After that type into terminal
+ $kill 2788
+
+Stopping ccnd: Run ccndstop from terminal to stop ccnd
+ $ccndstop
+
+==================================
+12. Contributors
+==================================
+
+Implementation and Testing: Cheng Yi (U. Arizona), 
+A K M Mahmudul Hoque (U. Memphis), Yaoqing Liu (U. Memphis), 
+Gus Sanders III (U. Memphis)
+
+Advising: Lan Wang (U. Memphis), Beichuan Zhang (U. Arizona).

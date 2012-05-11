@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$structroute__map.html" title="route_map" alt="" coords="35,204,121,231"/>
+<area shape="rect" id="node5" href="$structroute__map__index.html" title="route_map_index" alt="" coords="116,311,244,337"/>
+<area shape="rect" id="node8" href="$structroute__map__rule__list.html" title="route_map_rule_list" alt="" coords="203,204,344,231"/>
+<area shape="rect" id="node10" href="$structroute__map__rule.html" title="route_map_rule" alt="" coords="215,97,331,124"/>
+<area shape="rect" id="node12" href="$structroute__map__rule__cmd.html" title="route_map_rule_cmd" alt="" coords="199,5,348,32"/>
+</map>

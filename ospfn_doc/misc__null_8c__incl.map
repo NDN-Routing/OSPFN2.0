@@ -1,0 +1,20 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$zebra_8h.html" title="zebra.h" alt="" coords="1309,80,1376,107"/>
+<area shape="rect" id="node61" href="$prefix_8h.html" title="prefix.h" alt="" coords="2919,453,2987,480"/>
+<area shape="rect" id="node65" href="$rtadv_8h.html" title="zebra/rtadv.h" alt="" coords="2822,80,2921,107"/>
+<area shape="rect" id="node74" href="$interface_8h.html" title="zebra/interface.h" alt="" coords="2875,155,2997,181"/>
+<area shape="rect" id="node91" href="$irdp_8h.html" title="zebra/irdp.h" alt="" coords="2706,80,2797,107"/>
+<area shape="rect" id="node57" href="$zassert_8h.html" title="zassert.h" alt="" coords="2348,155,2425,181"/>
+<area shape="rect" id="node59" href="$str_8h.html" title="str.h" alt="" coords="2450,155,2499,181"/>
+<area shape="rect" id="node63" href="$sockunion_8h.html" title="sockunion.h" alt="" coords="2907,528,3000,555"/>
+<area shape="rect" id="node67" href="$vty_8h.html" title="vty.h" alt="" coords="2798,155,2849,181"/>
+<area shape="rect" id="node69" href="$thread_8h.html" title="thread.h" alt="" coords="2701,229,2773,256"/>
+<area shape="rect" id="node71" href="$log_8h.html" title="log.h" alt="" coords="2798,229,2849,256"/>
+<area shape="rect" id="node76" href="$redistribute_8h.html" title="redistribute.h" alt="" coords="2885,229,2987,256"/>
+<area shape="rect" id="node78" href="$table_8h.html" title="table.h" alt="" coords="2905,304,2969,331"/>
+<area shape="rect" id="node80" href="$zserv_8h.html" title="zserv.h" alt="" coords="2815,304,2880,331"/>
+<area shape="rect" id="node82" href="$rib_8h.html" title="rib.h" alt="" coords="2824,379,2872,405"/>
+<area shape="rect" id="node85" href="$if_8h.html" title="if.h" alt="" coords="2760,379,2800,405"/>
+<area shape="rect" id="node89" href="$workqueue_8h.html" title="workqueue.h" alt="" coords="2897,379,2996,405"/>
+<area shape="rect" id="node87" href="$linklist_8h.html" title="linklist.h" alt="" coords="2745,453,2815,480"/>
+</map>

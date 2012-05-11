@@ -1,0 +1,25 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$zebra_8h.html" title="zebra.h" alt="" coords="1601,155,1668,181"/>
+<area shape="rect" id="node61" href="$if_8h.html" title="if.h" alt="" coords="3009,229,3049,256"/>
+<area shape="rect" id="node65" href="$vty_8h.html" title="vty.h" alt="" coords="650,155,701,181"/>
+<area shape="rect" id="node69" href="$log_8h.html" title="log.h" alt="" coords="139,229,191,256"/>
+<area shape="rect" id="node72" href="$sockunion_8h.html" title="sockunion.h" alt="" coords="1529,379,1623,405"/>
+<area shape="rect" id="node74" href="$prefix_8h.html" title="prefix.h" alt="" coords="3114,304,3181,331"/>
+<area shape="rect" id="node77" href="$stream_8h.html" title="stream.h" alt="" coords="3247,80,3321,107"/>
+<area shape="rect" id="node80" href="$command_8h.html" title="command.h" alt="" coords="1059,80,1151,107"/>
+<area shape="rect" id="node87" href="$memory_8h.html" title="memory.h" alt="" coords="2825,155,2908,181"/>
+<area shape="rect" id="node89" href="$ioctl_8h.html" title="ioctl.h" alt="" coords="3345,80,3404,107"/>
+<area shape="rect" id="node91" href="$connected_8h.html" title="connected.h" alt="" coords="3428,80,3527,107"/>
+<area shape="rect" id="node93" href="$network_8h.html" title="network.h" alt="" coords="3551,80,3633,107"/>
+<area shape="rect" id="node96" href="$table_8h.html" title="table.h" alt="" coords="3057,155,3121,181"/>
+<area shape="rect" id="node98" href="$rib_8h.html" title="rib.h" alt="" coords="3124,229,3172,256"/>
+<area shape="rect" id="node101" href="$zserv_8h.html" title="zebra/zserv.h" alt="" coords="2932,155,3033,181"/>
+<area shape="rect" id="node105" href="$router-id_8h.html" title="zebra/router&#45;id.h" alt="" coords="2685,80,2805,107"/>
+<area shape="rect" id="node111" href="$redistribute_8h.html" title="zebra/redistribute.h" alt="" coords="2932,80,3071,107"/>
+<area shape="rect" id="node57" href="$zassert_8h.html" title="zassert.h" alt="" coords="2467,229,2544,256"/>
+<area shape="rect" id="node59" href="$str_8h.html" title="str.h" alt="" coords="2569,229,2617,256"/>
+<area shape="rect" id="node63" href="$linklist_8h.html" title="linklist.h" alt="" coords="2994,304,3064,331"/>
+<area shape="rect" id="node67" href="$thread_8h.html" title="thread.h" alt="" coords="43,229,115,256"/>
+<area shape="rect" id="node82" href="$vector_8h.html" title="vector.h" alt="" coords="1131,155,1203,181"/>
+<area shape="rect" id="node85" href="$route__types_8h.html" title="lib/route_types.h" alt="" coords="982,155,1105,181"/>
+</map>

@@ -1,0 +1,34 @@
+<map id="G" name="G">
+<area shape="rect" id="node6" href="$structisis__circuit.html" title="isis_circuit" alt="" coords="971,643,1056,669"/>
+<area shape="rect" id="node2" href="$structisis__adjacency.html" title="isis_adjacency" alt="" coords="1667,733,1777,760"/>
+<area shape="rect" id="node4" href="$structnlpids.html" title="nlpids" alt="" coords="331,537,389,564"/>
+<area shape="rect" id="node9" href="$structstream.html" title="stream" alt="" coords="657,537,721,564"/>
+<area shape="rect" id="node12" href="$structmetric.html" title="metric" alt="" coords="803,537,863,564"/>
+<area shape="rect" id="node14" href="$structpassword.html" title="password" alt="" coords="888,537,971,564"/>
+<area shape="rect" id="node17" href="$structisis__bcast__info.html" title="isis_bcast_info" alt="" coords="1677,348,1789,375"/>
+<area shape="rect" id="node19" href="$structthread.html" title="thread" alt="" coords="1799,211,1860,237"/>
+<area shape="rect" id="node28" href="$structthread__list.html" title="thread_list" alt="" coords="2085,348,2171,375"/>
+<area shape="rect" id="node39" href="$structisis__area.html" title="isis_area" alt="" coords="1052,537,1127,564"/>
+<area shape="rect" id="node44" href="$structisis.html" title="isis" alt="" coords="744,348,787,375"/>
+<area shape="rect" id="node79" href="$structisis__spftree.html" title="isis_spftree" alt="" coords="989,348,1083,375"/>
+<area shape="rect" id="node22" href="$structcpu__thread__history.html" title="cpu_thread_history" alt="" coords="1760,97,1899,124"/>
+<area shape="rect" id="node24" href="$structcpu__thread__history_1_1time__stats.html" title="cpu_thread_history::time_stats" alt="" coords="1724,5,1935,32"/>
+<area shape="rect" id="node26" href="$structthread__master.html" title="thread_master" alt="" coords="2034,537,2144,564"/>
+<area shape="rect" id="node31" href="$structlist.html" title="list" alt="" coords="452,211,492,237"/>
+<area shape="rect" id="node41" href="$structflags.html" title="flags" alt="" coords="621,348,672,375"/>
+<area shape="rect" id="node86" href="$structinterface.html" title="interface" alt="" coords="356,447,431,473"/>
+<area shape="rect" id="node33" href="$structlistnode.html" title="listnode" alt="" coords="437,97,507,124"/>
+<area shape="rect" id="node36" href="$structisis__passwd.html" title="isis_passwd" alt="" coords="1230,348,1327,375"/>
+<area shape="rect" id="node46" href="$structroute__map.html" title="route_map" alt="" coords="5,211,91,237"/>
+<area shape="rect" id="node49" href="$structroute__map__index.html" title="route_map_index" alt="" coords="13,348,141,375"/>
+<area shape="rect" id="node52" href="$structroute__map__rule__list.html" title="route_map_rule_list" alt="" coords="172,211,313,237"/>
+<area shape="rect" id="node54" href="$structroute__map__rule.html" title="route_map_rule" alt="" coords="185,97,300,124"/>
+<area shape="rect" id="node56" href="$structroute__map__rule__cmd.html" title="route_map_rule_cmd" alt="" coords="168,5,317,32"/>
+<area shape="rect" id="node60" href="$structarea__addr.html" title="area_addr" alt="" coords="681,211,764,237"/>
+<area shape="rect" id="node63" href="$structroute__table.html" title="route_table" alt="" coords="1241,211,1332,237"/>
+<area shape="rect" id="node65" href="$structroute__node.html" title="route_node" alt="" coords="1351,348,1443,375"/>
+<area shape="rect" id="node67" href="$structprefix.html" title="prefix" alt="" coords="1403,211,1460,237"/>
+<area shape="rect" id="node73" href="$structdict__t.html" title="dict_t" alt="" coords="907,348,964,375"/>
+<area shape="rect" id="node75" href="$structdnode__t.html" title="dnode_t" alt="" coords="935,211,1008,237"/>
+<area shape="rect" id="node90" href="$structisis__dis__record.html" title="isis_dis_record" alt="" coords="2247,643,2360,669"/>
+</map>

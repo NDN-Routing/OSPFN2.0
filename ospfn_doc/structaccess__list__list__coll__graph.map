@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node4" href="$structaccess__master.html" title="access_master" alt="" coords="5,201,120,228"/>
+<area shape="rect" id="node2" href="$structaccess__list.html" title="access_list" alt="" coords="123,308,213,335"/>
+<area shape="rect" id="node7" href="$structfilter.html" title="filter" alt="" coords="227,201,276,228"/>
+<area shape="rect" id="node10" href="$structfilter__cisco.html" title="filter_cisco" alt="" coords="188,96,276,123"/>
+<area shape="rect" id="node12" href="$structfilter__zebra.html" title="filter_zebra" alt="" coords="301,96,389,123"/>
+<area shape="rect" id="node14" href="$structprefix.html" title="prefix" alt="" coords="317,5,373,32"/>
+</map>

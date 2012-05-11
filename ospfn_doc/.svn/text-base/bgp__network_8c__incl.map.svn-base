@@ -1,0 +1,24 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$zebra_8h.html" title="zebra.h" alt="" coords="1479,80,1546,107"/>
+<area shape="rect" id="node61" href="$thread_8h.html" title="thread.h" alt="" coords="2973,229,3045,256"/>
+<area shape="rect" id="node63" href="$sockunion_8h.html" title="sockunion.h" alt="" coords="3286,155,3379,181"/>
+<area shape="rect" id="node65" href="$sockopt_8h.html" title="sockopt.h" alt="" coords="3241,80,3323,107"/>
+<area shape="rect" id="node68" href="$memory_8h.html" title="memory.h" alt="" coords="3565,80,3647,107"/>
+<area shape="rect" id="node72" href="$log_8h.html" title="log.h" alt="" coords="2753,229,2805,256"/>
+<area shape="rect" id="node75" href="$if_8h.html" title="if.h" alt="" coords="3722,80,3762,107"/>
+<area shape="rect" id="node77" href="$linklist_8h.html" title="linklist.h" alt="" coords="3697,155,3767,181"/>
+<area shape="rect" id="node79" href="$prefix_8h.html" title="prefix.h" alt="" coords="3348,80,3415,107"/>
+<area shape="rect" id="node82" href="$command_8h.html" title="command.h" alt="" coords="2945,80,3037,107"/>
+<area shape="rect" id="node92" href="$privs_8h.html" title="privs.h" alt="" coords="3787,80,3849,107"/>
+<area shape="rect" id="node95" href="$bgpd_8h.html" title="bgpd/bgpd.h" alt="" coords="3440,80,3539,107"/>
+<area shape="rect" id="node98" href="$bgp__fsm_8h.html" title="bgpd/bgp_fsm.h" alt="" coords="3873,80,3994,107"/>
+<area shape="rect" id="node100" href="$bgp__attr_8h.html" title="bgpd/bgp_attr.h" alt="" coords="4026,155,4146,181"/>
+<area shape="rect" id="node102" href="$bgp__debug_8h.html" title="bgpd/bgp_debug.h" alt="" coords="4070,80,4209,107"/>
+<area shape="rect" id="node105" href="$bgp__network_8h.html" title="bgpd/bgp_network.h" alt="" coords="4233,80,4381,107"/>
+<area shape="rect" id="node57" href="$zassert_8h.html" title="zassert.h" alt="" coords="1783,155,1861,181"/>
+<area shape="rect" id="node59" href="$str_8h.html" title="str.h" alt="" coords="1885,155,1934,181"/>
+<area shape="rect" id="node70" href="$memtypes_8h.html" title="lib/memtypes.h" alt="" coords="3549,155,3663,181"/>
+<area shape="rect" id="node84" href="$vector_8h.html" title="vector.h" alt="" coords="2894,155,2966,181"/>
+<area shape="rect" id="node86" href="$vty_8h.html" title="vty.h" alt="" coords="2817,155,2869,181"/>
+<area shape="rect" id="node90" href="$route__types_8h.html" title="lib/route_types.h" alt="" coords="2991,155,3114,181"/>
+</map>

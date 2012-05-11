@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$structquagga__signal__t.html" title="quagga_signal_t" alt="" coords="38,188,159,215"/>
+<area shape="rect" id="node4" href="$structthread.html" title="thread" alt="" coords="229,188,291,215"/>
+<area shape="rect" id="node13" href="$structthread__list.html" title="thread_list" alt="" coords="217,293,303,320"/>
+<area shape="rect" id="node7" href="$structcpu__thread__history.html" title="cpu_thread_history" alt="" coords="191,96,329,123"/>
+<area shape="rect" id="node9" href="$structcpu__thread__history_1_1time__stats.html" title="cpu_thread_history::time_stats" alt="" coords="155,5,365,32"/>
+<area shape="rect" id="node11" href="$structthread__master.html" title="thread_master" alt="" coords="251,472,361,499"/>
+</map>

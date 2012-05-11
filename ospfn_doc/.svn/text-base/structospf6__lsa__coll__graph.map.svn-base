@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$structospf6__lsdb.html" title="ospf6_lsdb" alt="" coords="375,188,464,215"/>
+<area shape="rect" id="node4" href="$structroute__table.html" title="route_table" alt="" coords="441,96,532,123"/>
+<area shape="rect" id="node6" href="$structroute__node.html" title="route_node" alt="" coords="497,188,588,215"/>
+<area shape="rect" id="node8" href="$structprefix.html" title="prefix" alt="" coords="581,96,637,123"/>
+<area shape="rect" id="node13" href="$structthread.html" title="thread" alt="" coords="80,188,141,215"/>
+<area shape="rect" id="node22" href="$structthread__list.html" title="thread_list" alt="" coords="106,295,192,321"/>
+<area shape="rect" id="node16" href="$structcpu__thread__history.html" title="cpu_thread_history" alt="" coords="41,96,180,123"/>
+<area shape="rect" id="node18" href="$structcpu__thread__history_1_1time__stats.html" title="cpu_thread_history::time_stats" alt="" coords="5,5,216,32"/>
+<area shape="rect" id="node20" href="$structthread__master.html" title="thread_master" alt="" coords="18,475,128,501"/>
+<area shape="rect" id="node25" href="$structospf6__lsa__header.html" title="ospf6_lsa_header" alt="" coords="222,188,351,215"/>
+</map>

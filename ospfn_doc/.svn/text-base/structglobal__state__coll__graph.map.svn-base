@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$structdaemon.html" title="daemon" alt="" coords="104,491,174,517"/>
+<area shape="rect" id="node5" href="$structrestart__info.html" title="restart_info" alt="" coords="230,303,320,329"/>
+<area shape="rect" id="node7" href="$structthread.html" title="thread" alt="" coords="244,188,306,215"/>
+<area shape="rect" id="node16" href="$structthread__list.html" title="thread_list" alt="" coords="345,303,431,329"/>
+<area shape="rect" id="node10" href="$structcpu__thread__history.html" title="cpu_thread_history" alt="" coords="206,96,344,123"/>
+<area shape="rect" id="node12" href="$structcpu__thread__history_1_1time__stats.html" title="cpu_thread_history::time_stats" alt="" coords="170,5,380,32"/>
+<area shape="rect" id="node14" href="$structthread__master.html" title="thread_master" alt="" coords="388,491,498,517"/>
+</map>

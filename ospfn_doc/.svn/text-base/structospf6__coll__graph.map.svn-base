@@ -1,0 +1,19 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$structospf6__route__table.html" title="ospf6_route_table" alt="" coords="199,204,332,231"/>
+<area shape="rect" id="node4" href="$structroute__table.html" title="route_table" alt="" coords="290,97,381,124"/>
+<area shape="rect" id="node6" href="$structroute__node.html" title="route_node" alt="" coords="357,204,448,231"/>
+<area shape="rect" id="node12" href="$structospf6__lsdb.html" title="ospf6_lsdb" alt="" coords="85,204,173,231"/>
+<area shape="rect" id="node8" href="$structprefix.html" title="prefix" alt="" coords="577,97,633,124"/>
+<area shape="rect" id="node15" href="$structroute__map.html" title="route_map" alt="" coords="697,204,783,231"/>
+<area shape="rect" id="node18" href="$structroute__map__index.html" title="route_map_index" alt="" coords="737,327,865,353"/>
+<area shape="rect" id="node21" href="$structroute__map__rule__list.html" title="route_map_rule_list" alt="" coords="864,204,1005,231"/>
+<area shape="rect" id="node23" href="$structroute__map__rule.html" title="route_map_rule" alt="" coords="863,97,979,124"/>
+<area shape="rect" id="node25" href="$structroute__map__rule__cmd.html" title="route_map_rule_cmd" alt="" coords="847,5,996,32"/>
+<area shape="rect" id="node29" href="$structthread.html" title="thread" alt="" coords="1069,204,1131,231"/>
+<area shape="rect" id="node38" href="$structthread__list.html" title="thread_list" alt="" coords="1171,327,1257,353"/>
+<area shape="rect" id="node32" href="$structcpu__thread__history.html" title="cpu_thread_history" alt="" coords="1060,97,1199,124"/>
+<area shape="rect" id="node34" href="$structcpu__thread__history_1_1time__stats.html" title="cpu_thread_history::time_stats" alt="" coords="1024,5,1235,32"/>
+<area shape="rect" id="node36" href="$structthread__master.html" title="thread_master" alt="" coords="1083,507,1193,533"/>
+<area shape="rect" id="node42" href="$structlist.html" title="list" alt="" coords="20,204,60,231"/>
+<area shape="rect" id="node44" href="$structlistnode.html" title="listnode" alt="" coords="5,97,75,124"/>
+</map>

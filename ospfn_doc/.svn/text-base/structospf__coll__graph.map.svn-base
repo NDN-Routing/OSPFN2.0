@@ -1,0 +1,33 @@
+<map id="G" name="G">
+<area shape="rect" id="node58" href="$structospf__area.html" title="ospf_area" alt="" coords="1261,740,1344,767"/>
+<area shape="rect" id="node2" href="$structstream.html" title="stream" alt="" coords="713,376,777,403"/>
+<area shape="rect" id="node5" href="$structroute__map.html" title="route_map" alt="" coords="702,1332,789,1359"/>
+<area shape="rect" id="node8" href="$structroute__map__index.html" title="route_map_index" alt="" coords="997,1304,1125,1331"/>
+<area shape="rect" id="node11" href="$structroute__map__rule__list.html" title="route_map_rule_list" alt="" coords="675,1228,816,1255"/>
+<area shape="rect" id="node13" href="$structroute__map__rule.html" title="route_map_rule" alt="" coords="462,1228,578,1255"/>
+<area shape="rect" id="node15" href="$structroute__map__rule__cmd.html" title="route_map_rule_cmd" alt="" coords="183,1228,332,1255"/>
+<area shape="rect" id="node19" href="$structaccess__list.html" title="access_list" alt="" coords="700,287,791,313"/>
+<area shape="rect" id="node23" href="$structaccess__list__list.html" title="access_list_list" alt="" coords="1004,235,1119,261"/>
+<area shape="rect" id="node21" href="$structaccess__master.html" title="access_master" alt="" coords="1245,227,1360,253"/>
+<area shape="rect" id="node26" href="$structfilter.html" title="filter" alt="" coords="495,355,545,381"/>
+<area shape="rect" id="node29" href="$structfilter__cisco.html" title="filter_cisco" alt="" coords="213,405,301,432"/>
+<area shape="rect" id="node31" href="$structfilter__zebra.html" title="filter_zebra" alt="" coords="213,355,302,381"/>
+<area shape="rect" id="node33" href="$structprefix.html" title="prefix" alt="" coords="6,480,63,507"/>
+<area shape="rect" id="node52" href="$structroute__node.html" title="route_node" alt="" coords="699,480,791,507"/>
+<area shape="rect" id="node76" href="$structprefix__list__entry.html" title="prefix_list_entry" alt="" coords="197,1373,317,1400"/>
+<area shape="rect" id="node36" href="$structthread.html" title="thread" alt="" coords="715,140,776,167"/>
+<area shape="rect" id="node45" href="$structthread__list.html" title="thread_list" alt="" coords="1018,107,1105,133"/>
+<area shape="rect" id="node39" href="$structcpu__thread__history.html" title="cpu_thread_history" alt="" coords="451,140,589,167"/>
+<area shape="rect" id="node41" href="$structcpu__thread__history_1_1time__stats.html" title="cpu_thread_history::time_stats" alt="" coords="152,140,363,167"/>
+<area shape="rect" id="node43" href="$structthread__master.html" title="thread_master" alt="" coords="1247,45,1358,72"/>
+<area shape="rect" id="node48" href="$structospf__lsdb.html" title="ospf_lsdb" alt="" coords="704,740,787,767"/>
+<area shape="rect" id="node60" href="$structospf__lsa.html" title="ospf_lsa" alt="" coords="1502,801,1575,828"/>
+<area shape="rect" id="node50" href="$structroute__table.html" title="route_table" alt="" coords="474,679,566,705"/>
+<area shape="rect" id="node62" href="$structlsa__header.html" title="lsa_header" alt="" coords="701,1167,789,1193"/>
+<area shape="rect" id="node66" href="$structvertex.html" title="vertex" alt="" coords="1030,1060,1093,1087"/>
+<area shape="rect" id="node69" href="$structlist.html" title="list" alt="" coords="725,1023,765,1049"/>
+<area shape="rect" id="node71" href="$structlistnode.html" title="listnode" alt="" coords="485,1023,555,1049"/>
+<area shape="rect" id="node74" href="$structprefix__list.html" title="prefix_list" alt="" coords="479,1399,561,1425"/>
+<area shape="rect" id="node81" href="$structprefix__master.html" title="prefix_master" alt="" coords="1008,1460,1115,1487"/>
+<area shape="rect" id="node84" href="$structprefix__list__list.html" title="prefix_list_list" alt="" coords="692,1460,799,1487"/>
+</map>

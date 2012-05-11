@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$if__sysctl_8c.html" title="zebra/if_sysctl.c" alt="" coords="5,80,123,107"/>
+<area shape="rect" id="node5" href="$kernel__socket_8c.html" title="zebra/kernel_socket.c" alt="" coords="147,80,300,107"/>
+<area shape="rect" id="node7" href="$rt__socket_8c.html" title="zebra/rt_socket.c" alt="" coords="325,80,451,107"/>
+<area shape="rect" id="node9" href="$rtread__sysctl_8c.html" title="zebra/rtread_sysctl.c" alt="" coords="475,80,623,107"/>
+</map>

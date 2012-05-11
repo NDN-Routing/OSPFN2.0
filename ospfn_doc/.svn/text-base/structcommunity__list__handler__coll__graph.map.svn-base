@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$structcommunity__list__master.html" title="community_list_master" alt="" coords="5,204,168,231"/>
+<area shape="rect" id="node4" href="$structcommunity__list__list.html" title="community_list_list" alt="" coords="92,97,231,124"/>
+<area shape="rect" id="node6" href="$structcommunity__list.html" title="community_list" alt="" coords="193,204,305,231"/>
+<area shape="rect" id="node8" href="$structcommunity__entry.html" title="community_entry" alt="" coords="255,97,381,124"/>
+<area shape="rect" id="node10" href="$structre__pattern__buffer.html" title="re_pattern_buffer" alt="" coords="119,5,245,32"/>
+<area shape="rect" id="node13" href="$structecommunity.html" title="ecommunity" alt="" coords="271,5,367,32"/>
+<area shape="rect" id="node15" href="$structcommunity.html" title="community" alt="" coords="391,5,479,32"/>
+</map>

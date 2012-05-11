@@ -1,0 +1,17 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$structmsg__del__if.html" title="msg_del_if" alt="" coords="247,19,335,45"/>
+<area shape="rect" id="node4" href="$structmsg__nsm__change.html" title="msg_nsm_change" alt="" coords="225,69,356,96"/>
+<area shape="rect" id="node6" href="$structmsg__register__event.html" title="msg_register_event" alt="" coords="219,120,363,147"/>
+<area shape="rect" id="node8" href="$structlsa__filter__type.html" title="lsa_filter_type" alt="" coords="6,145,114,172"/>
+<area shape="rect" id="node12" href="$structmsg__sync__lsdb.html" title="msg_sync_lsdb" alt="" coords="233,171,349,197"/>
+<area shape="rect" id="node10" href="$structmsg__new__if.html" title="msg_new_if" alt="" coords="243,221,338,248"/>
+<area shape="rect" id="node15" href="$structmsg__ready__notify.html" title="msg_ready_notify" alt="" coords="225,272,356,299"/>
+<area shape="rect" id="node17" href="$structmsg__reply.html" title="msg_reply" alt="" coords="248,323,333,349"/>
+<area shape="rect" id="node19" href="$structapimsghdr.html" title="apimsghdr" alt="" coords="248,373,333,400"/>
+<area shape="rect" id="node21" href="$structmsg__lsa__change__notify.html" title="msg_lsa_change_notify" alt="" coords="209,424,373,451"/>
+<area shape="rect" id="node23" href="$structlsa__header.html" title="lsa_header" alt="" coords="16,449,104,476"/>
+<area shape="rect" id="node31" href="$structmsg__originate__request.html" title="msg_originate_request" alt="" coords="209,475,372,501"/>
+<area shape="rect" id="node25" href="$structmsg__register__opaque__type.html" title="msg_register_opaque_type" alt="" coords="195,525,386,552"/>
+<area shape="rect" id="node27" href="$structmsg__ism__change.html" title="msg_ism_change" alt="" coords="227,576,354,603"/>
+<area shape="rect" id="node29" href="$structmsg__delete__request.html" title="msg_delete_request" alt="" coords="216,627,365,653"/>
+</map>
