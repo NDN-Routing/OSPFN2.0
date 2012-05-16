@@ -512,8 +512,8 @@ add_new_name_prefix(struct ospf_apiclient *oclient, struct hash *prefix_table, s
 	if (oe->nexthop_list == NULL)
  	{	
 		rc=ospf_apiclient_get_router_nexthops(oclient, *origin);
-		writeLogg(ospfn->logFile,__FILE__,__FUNCTION__,__LINE__,"Return from nexthop query: %d\n",rc);	
-		writeLogg(ospfn->logFile,__FILE__,__FUNCTION__,__LINE__,"Nexthop Null for origin: %s and prefix: %s\n",inet_ntoa(*origin),np->name);	
+		//writeLogg(ospfn->logFile,__FILE__,__FUNCTION__,__LINE__,"Return from nexthop query: %d\n",rc);	
+		//writeLogg(ospfn->logFile,__FILE__,__FUNCTION__,__LINE__,"Nexthop Null for origin: %s and prefix: %s\n",inet_ntoa(*origin),np->name);	
 	}	
 	else
 		update_name_prefix_nexthop_list(fe, origin_table);
