@@ -799,7 +799,7 @@ nexthop_change_callback(struct in_addr router_id, int nexthop_count, struct in_a
     	struct nameprefix_entry *ne;
     	struct prefixtable_entry *fe;
 
-	writeLogg(ospfn->logFile,__FILE__,__FUNCTION__,__LINE__,"Next Hop Change Callback Called \n");
+	//writeLogg(ospfn->logFile,__FILE__,__FUNCTION__,__LINE__,"Next Hop Change Callback Called \n");
 
     	oe = origin_hash_get(ospfn->origin_table, &router_id);
 
