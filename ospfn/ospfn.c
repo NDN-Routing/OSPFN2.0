@@ -415,7 +415,7 @@ readConfigFile(const char *filename, int isLogOnlyProcessing)
 		len=strlen(buf);
 		if(buf[len-1] == '\n')
 		buf[len-1]='\0';		
-		writeLogg(ospfn->logFile,__FILE__,__FUNCTION__,__FILE__,"%s\n",buf);
+		writeLogg(ospfn->logFile,__FILE__,__FUNCTION__,__LINE__,"%s\n",buf);
 		process_conf_command(buf,isLogOnlyProcessing);	
 	}
 
@@ -835,7 +835,7 @@ inject_name_opaque_lsa(struct name_prefix *np, unsigned int op_id )
     	inet_aton ("127.0.0.1", &ifaddr);    
 	inet_aton ("0", &area_id);
     	lsa_type = 10;
-    	opaque_type = 235;
+    	opaque_type = 236;
 
     	struct name_opaque_body *nob= (struct name_opaque_body *)malloc( sizeof(struct name_opaque_body) + np->length);
 	nob->name_length=np->length;
