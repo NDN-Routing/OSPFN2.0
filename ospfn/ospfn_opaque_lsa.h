@@ -7,7 +7,7 @@
 #include "tables.h"
 
 #define ASYNCPORT 4000
-#define NAME_OPAQUE_LSA 235
+#define NAME_OPAQUE_LSA 236
 #define ADJ_OPAQUE_LSA 234
 
 
