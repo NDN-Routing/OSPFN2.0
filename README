@@ -18,7 +18,8 @@ on Quagga.  This manual covers OSPFN v0.2.0.
 9. OSPFN Log
 10. Stopping ospfn
 11. Stopping ccnd, zebra, ospfd
-12. Contributors
+12. Startup Scripts
+13. Contributors
 
 
 
@@ -327,7 +328,8 @@ NB: ccnd give highest preference to the face added last.
 
 First start zebra so that ospfd can acquire needed interface information. 
 Next start ospfd and ccnd, and then start ospfn.  The commands needed are 
-shown below:
+shown below but one can just run the script startAllFourDaemons.sh located
+in script folder to run all four daemons.
 
 $ sudo zebra -d
     
@@ -336,6 +338,8 @@ $ sudo ospfd -d -a
 $ ccndstart   
     
 $ ospfn
+
+
 
 ospfn can also take several command-line options:
 
@@ -409,10 +413,16 @@ fib entries by ospfn. After deleting the fib entries ospfn will stop and
 ospfnstop will exit itself. 
 
 A precautious measure is to always restart all 4 daemons: zebra, ospfd, ccnd, ospfn.
+Running restartAllFourDaemons.sh script in script folder will restart all four
+daemons.
 
 ==================================
 11. Stopping ccnd, zebra, ospfd 
 ==================================
+
+For stopping ccnd, zebra, ospfd and ospfn one can follow the below process or can 
+invoke the stopAllFourDaemons.sh script located in script folder to stop all 
+processes.
 
 Stopping ccnd: stop ccnd by typping into terminal 
  $ccndstop
@@ -443,7 +453,17 @@ Stopping ccnd: Run ccndstop from terminal to stop ccnd
  $ccndstop
 
 ==================================
-12. Contributors
+11. Startup Scripts
+==================================
+
+For restarting all four process at once script restartAllFourDaemons.sh is provided
+in script folder. Invoking of this script will restart all four process ( zebra, 
+ospfd, ccnd and ospfn). This restarting script uses two other script for stopping:
+stopAllFourDaemons.sh and starting:startAllFourDaemons.sh. User also can separately
+use these two script to stop and start all four processes at once.
+
+==================================
+13. Contributors
 ==================================
 
 Implementation and Testing: Cheng Yi (U. Arizona), 
