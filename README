@@ -453,7 +453,7 @@ Stopping ccnd: Run ccndstop from terminal to stop ccnd
  $ccndstop
 
 ==================================
-11. Startup Scripts
+12. Startup Scripts
 ==================================
 
 For restarting all four process at once script restartAllFourDaemons.sh is provided
