@@ -212,6 +212,57 @@ The command "ifconfig -a" should list the new tunnel interface.  If the
 GRE tunnel is set up correctly, pinging the other end's private IP should work.
 
 
+6.2.3 GRE tunnel configuration in FreeBSD
+
+On netlogic.cs.memphis.edu:
+
+Run the following command to create a new gre tunnel:
+
+# ifconfig gre create
+
+  gre1
+  
+It will create a new gre tunnel and display the name of it. In this example, the
+ name is
+gre1.
+
+Now run the following commands to configure the tunnel:
+
+# ifconfig gre1 10.0.1.10 10.0.1.9 netmask 255.255.255.252
+
+# ifconfig gre1 tunnel 141.225.11.150 150.135.82.77
+
+To verify the tunnel setup on netlogic, run the following:
+
+# ifconfig gre1
+gre1: flags=9051<UP,POINTOPOINT,RUNNING,LINK0,MULTICAST> metric 0 mtu 1476
+        tunnel inet 141.225.11.150 --> 150.135.82.77
+        inet6 fe80::211:43ff:fec2:61e0%gre1 prefixlen 64 scopeid 0xa
+        inet 10.0.1.10 --> 10.0.1.9 netmask 0xfffffffc
+        nd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>
+		
+Now we need to make the tunnel permanent, we need to add the appropriate configu
+ration
+to the /etc/rc.conf configuration file. Tunnel configuration for netlogic in the
+ /etc/rc.conf
+file looks like the following code:
+
+cloned_interfaces="gre1"
+ifconfig_gre0="inet 10.0.1.10 10.0.1.9 netmask 255.255.255.252 tunnel 141.225.11
+.150 150.135.82.77 up"
+
+If there are multiple gre tunnels, we specify the name in cloned_interfaces sepa
+rated by
+a space e.x. cloned_interfaces="gre1 gre2" and add the ifconfig line for the new
+ gre tunnel
+below the previous one.
+
+Similar configurations should be created on hobo.cs.arizona.edu. 
+
+If the GRE tunnel is set up correctly, pinging the other end's private IP should
+ work.
+
+
 6.3 Quagga Configuration
 
 The OSPFN source code includes the Quagga 0.99.17 code, so no separate 
