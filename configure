@@ -4771,7 +4771,7 @@ $as_echo "Intel default" >&6; }
   	CFLAGS="${CFLAGS} -Wsign-compare -Wpointer-arith"
   	CFLAGS="${CFLAGS} -Wbad-function-cast -Wwrite-strings"
   	CFLAGS="${CFLAGS} -Wmissing-prototypes -Wmissing-declarations"
-  	CFLAGS="${CFLAGS} -Wchar-subscripts -Wcast-qual"
+  	CFLAGS="${CFLAGS} -Wchar-subscripts -Wcast-qual -D_FILE_OFFSET_BITS=64"
   	# TODO: conditionally addd -Wpacked if handled
   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: gcc default" >&5
 $as_echo "gcc default" >&6; }
