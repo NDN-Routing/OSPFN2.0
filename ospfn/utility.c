@@ -34,8 +34,8 @@
 u_char * 
 align_data(u_char *data, unsigned int mod)
 {
-	int i;	
-	int len;
+	unsigned int i;	
+	unsigned int len;
 	if (strlen((char *)data)%4 == mod)
 		return data;
 	else
