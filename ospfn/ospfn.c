@@ -128,8 +128,9 @@ init(void)
 		exit(1);
 	}
 	ospfn->local_scope_template = ccn_charbuf_create();
-	unsigned char ccndid_storage[32] = {0};
-	ospfn->ccndid=ccndid_storage;	
+	//unsigned char ccndid_storage[32] = {0};
+	//ospfn->ccndid=ccndid_storage;	
+	ospfn->ccndid=calloc(33,sizeof(char));
 	ospfn->CCN_NAME_TYPE=CCN_NAME_FORMAT_URI;
 	ospfn->mp=NULL;
 }
