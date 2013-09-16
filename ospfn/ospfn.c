@@ -55,6 +55,7 @@
 #include "ospfn_opaque_lsa.h"
 #include "utility.h"
 #include "ospfn.h"
+#include "ccn_fib.h"
 
 #include "ospfd/ospf_opaque.h"
 #include "ospfd/ospf_api.h"
@@ -929,11 +930,21 @@ main(int argc, char *argv[])
     
     	ccn_handle = ccn_create();
     	res = ccn_connect(ccn_handle, NULL); 
-    	if (res < 0) 
-	{
+    	if (res < 0) {
 		ccn_perror(ccn_handle, "Cannot connect to ccnd.");
 		exit(1);
     	}
+
+	init_data(ospfn->local_scope_template);
+	opsfn->ccndid_size = get_ccndid(ccn_handle, local_scope_template, ospfn->ccndid);
+	if ((int)ospfn->ccndid_size != 32 ){
+		fprintf(stderr, "Incorrect size for ccnd id in response\n");
+		fprintf(stderr, "Exiting from ospfn\n");
+		exit (1);
+	}else{
+		printf("ccnd_id Size:%d  ccnd_id: %s \n",(int)ccndid_size,ccndid);
+	}
+
 
     	/* Open connection to OSPF daemon */
     	writeLogg(ospfn->logFile,__FILE__,__FUNCTION__,__LINE__,"Connecting to OSPF daemon ............\n");
