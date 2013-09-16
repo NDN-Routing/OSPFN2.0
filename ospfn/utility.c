@@ -32,7 +32,7 @@
 */
 
 u_char * 
-align_data(u_char *data, int mod)
+align_data(u_char *data, unsigned int mod)
 {
 	int i;	
 	int len;

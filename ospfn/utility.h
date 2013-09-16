@@ -5,7 +5,7 @@ Definition is provided in utility.c
 #ifndef _UTILITY_H_
 #define _UTILITY_H_
 
-u_char * align_data(u_char *data, int mod);
+u_char * align_data(u_char *data, unsigned int mod);
 char * strToLower(char *str);
 char * substring(const char* str, size_t begin, size_t len);
 char * getLocalTimeStamp(void);
