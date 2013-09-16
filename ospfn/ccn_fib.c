@@ -25,7 +25,7 @@
 #include <ccn/charbuf.h>
 
 #include "ccn_fib.h"
-#include "opsfn.h"
+#include "ospfn.h"
 
 static void 
 ccn_fib_warn(int lineno, const char *format, ...)
