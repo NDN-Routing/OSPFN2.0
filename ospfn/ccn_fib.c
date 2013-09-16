@@ -328,8 +328,8 @@ ccn_face_instance *construct_face(const unsigned char *ccndid, size_t ccndid_siz
  * initialize local data
  */
 static void 
-init_data(struct ccn_charbuf *local_scope_template,
-        struct ccn_charbuf *no_name)
+init_data(struct ccn_charbuf *local_scope_template)
+        //struct ccn_charbuf *no_name)
 {
 	ccn_charbuf_append_tt(local_scope_template, CCN_DTAG_Interest, CCN_DTAG);
 	ccn_charbuf_append_tt(local_scope_template, CCN_DTAG_Name, CCN_DTAG);
@@ -337,7 +337,7 @@ init_data(struct ccn_charbuf *local_scope_template,
 	ccnb_tagged_putf(local_scope_template, CCN_DTAG_Scope, "1");
 	ccn_charbuf_append_closer(local_scope_template);    /* </Interest> */
 
-	ccn_name_init(no_name);
+	//ccn_name_init(no_name);
 }
 
 static int 
@@ -360,7 +360,8 @@ add_delete_ccn_face(struct ccn *h, const char *uri, const char *address, const u
 	memset(port, 0, 6);
 	sprintf(port, "%d", p);
 
-	init_data(local_scope_template, no_name);
+	init_data(local_scope_template);//, no_name);
+	ccn_name_init(no_name);
 
 	ccndid_size = get_ccndid(h, local_scope_template, ccndid);
 	if (ccndid_size != sizeof(ccndid_storage))

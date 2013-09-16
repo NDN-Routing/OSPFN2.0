@@ -90,7 +90,7 @@ substring(const char* str, size_t begin, size_t len)
 char * 
 getLocalTimeStamp(void)
 {
-	char *timestamp = (char *)malloc(sizeof(char) * 17);
+	char *timestamp = (char *)calloc(17,sizeof(char));
 	time_t ltime;
 	ltime=time(NULL);
 	struct tm *tm;
@@ -126,11 +126,11 @@ startLogging(char *loggingDir)
 	int isLogDirExists=0;
 	char *time=getLocalTimeStamp();
 
-	pwdbuffer=(char *)malloc(sizeof(char)*200);		
-	logDir=(char *)malloc(sizeof(char)*200);
-	logFileName=(char *)malloc(sizeof(char)*200);	
-	logExt=(char *)malloc(sizeof(char)*5);
-	defaultLogDir=(char *)malloc(sizeof(char)*10);
+	pwdbuffer=(char *)calloc(200,sizeof(char));		
+	logDir=(char *)calloc(200,sizeof(char));
+	logFileName=(char *)calloc(200,sizeof(char));	
+	logExt=(char *)calloc(5,sizeof(char));
+	defaultLogDir=(char *)calloc(10,sizeof(char));
 
 	memcpy(logExt,".log",4);
 	logExt[4]='\0';
@@ -175,8 +175,8 @@ startLogging(char *loggingDir)
 	}	
 	memcpy(logFileName+strlen(logFileName),time,strlen(time)+1);	
 	memcpy(logFileName+strlen(logFileName),logExt,strlen(logExt)+1);	
-	ret=(char *)malloc(strlen(logFileName)+1);
-       	memcpy(ret,logFileName,strlen(logFileName)+1); 
+	ret=(char *)calloc(strlen(logFileName)+1,sizeof(char));
+    memcpy(ret,logFileName,strlen(logFileName)+1); 
 	free(time);	
 	free(logDir);
 	free(logFileName);	
