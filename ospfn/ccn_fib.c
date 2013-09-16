@@ -381,6 +381,7 @@ add_delete_ccn_face(struct ccn *h, const char *uri, const char *address, const u
 	ON_NULL_CLEANUP(fi);
 
 	/* send new face request to actually create a new face */
+	
 	nfi = create_face(h, ospfn->local_scope_template, no_name, fi);
 	ON_NULL_CLEANUP(nfi);
 
