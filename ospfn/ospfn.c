@@ -936,7 +936,7 @@ main(int argc, char *argv[])
     	}
 
 	init_data(ospfn->local_scope_template);
-	opsfn->ccndid_size = get_ccndid(ccn_handle, local_scope_template, ospfn->ccndid);
+	ospfn->ccndid_size = get_ccndid(ccn_handle, local_scope_template, ospfn->ccndid);
 	if ((int)ospfn->ccndid_size != 32 ){
 		fprintf(stderr, "Incorrect size for ccnd id in response\n");
 		fprintf(stderr, "Exiting from ospfn\n");
