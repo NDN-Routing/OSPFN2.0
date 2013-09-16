@@ -228,7 +228,7 @@ struct ccn_face_instance *create_face(struct ccn *h, struct ccn_charbuf *local_s
  * Get ccnd id
  *
  */
-static int 
+int 
 get_ccndid(struct ccn *h, struct ccn_charbuf *local_scope_template,
         unsigned char *ccndid)
 {
@@ -328,7 +328,7 @@ ccn_face_instance *construct_face(const unsigned char *ccndid, size_t ccndid_siz
 /**
  * initialize local data
  */
-static void 
+void 
 init_data(struct ccn_charbuf *local_scope_template)
         //struct ccn_charbuf *no_name)
 {
