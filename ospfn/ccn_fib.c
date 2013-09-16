@@ -346,11 +346,11 @@ add_delete_ccn_face(struct ccn *h, const char *uri, const char *address, const u
 {
 	struct ccn_charbuf *prefix;
 	char port[6];
-	struct ccn_charbuf *local_scope_template = ccn_charbuf_create();
+	//struct ccn_charbuf *local_scope_template = ccn_charbuf_create();
 	struct ccn_charbuf *no_name = ccn_charbuf_create();
-	unsigned char ccndid_storage[32] = {0};
-	unsigned char *ccndid = ccndid_storage;
-	size_t ccndid_size = 0;
+	//unsigned char ccndid_storage[32] = {0};
+	//unsigned char *ccndid = ccndid_storage;
+	//size_t ccndid_size = 0;
 	struct ccn_face_instance *fi;
 	struct ccn_face_instance *nfi;
 	int res;
@@ -361,28 +361,33 @@ add_delete_ccn_face(struct ccn *h, const char *uri, const char *address, const u
 	memset(port, 0, 6);
 	sprintf(port, "%d", p);
 
-	init_data(local_scope_template);//, no_name);
+	//init_data(local_scope_template);//, no_name);
 	ccn_name_init(no_name);
 
+	/*
 	ccndid_size = get_ccndid(h, local_scope_template, ccndid);
 	if (ccndid_size != sizeof(ccndid_storage))
  	{
 		fprintf(stderr, "Incorrect size for ccnd id in response\n");
 		ON_ERROR_CLEANUP(-1);
 	}
+	*/
+
+		
 
 	/* construct a face instance for new face request */
-	fi = construct_face(ccndid, ccndid_size, address, port);
+	//fi = construct_face(ccndid, ccndid_size, address, port);
+	fi = construct_face(ospfn->ccndid, ospfn->ccndid_size, address, port);
 	ON_NULL_CLEANUP(fi);
 
 	/* send new face request to actually create a new face */
-	nfi = create_face(h, local_scope_template, no_name, fi);
+	nfi = create_face(h, ospfn->local_scope_template, no_name, fi);
 	ON_NULL_CLEANUP(nfi);
 
-	res = register_unregister_prefix(h, local_scope_template, no_name, prefix, nfi, operation);
+	res = register_unregister_prefix(h, ospfn->local_scope_template, no_name, prefix, nfi, operation);
 	ON_ERROR_CLEANUP(res);
 
-	ccn_charbuf_destroy(&local_scope_template);
+	//ccn_charbuf_destroy(&local_scope_template);
 	ccn_charbuf_destroy(&no_name);
 	ccn_face_instance_destroy(&fi);
 	ccn_face_instance_destroy(&nfi);
@@ -392,7 +397,7 @@ add_delete_ccn_face(struct ccn *h, const char *uri, const char *address, const u
 
 	cleanup:
 		ccn_charbuf_destroy(&prefix);
-		ccn_charbuf_destroy(&local_scope_template);
+		//ccn_charbuf_destroy(&local_scope_template);
 		ccn_charbuf_destroy(&no_name);
 		ccn_face_instance_destroy(&fi);
 		ccn_face_instance_destroy(&nfi);
