@@ -1,3 +1,6 @@
+#ifndef _OSPFN_OPAQUE_LSA_H_
+#define _OSPFN_OPAQUE_LSA_H_
+
 // LSA related Header 
 
 #include "ospfd/ospfd.h"
@@ -5,6 +8,7 @@
 #include "ospfd/ospf_lsa.h"
 #include "ospfd/ospf_opaque.h"
 #include "tables.h"
+
 
 #define ASYNCPORT 4000
 #define NAME_OPAQUE_LSA 236
@@ -38,6 +42,7 @@ struct ccnx_adjacent_opaque_lsa
 	char adj_list[1];
 };
 
+#endif
 //extern struct ccn_neighbors *neighbors=NULL;
 
 // function protoype
