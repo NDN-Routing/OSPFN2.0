@@ -28,6 +28,10 @@ struct ospfn
 	struct hash *prefix_table;
 	struct hash *origin_table;
 	
+	struct ccn_charbuf *local_scope_template;
+	unsigned char *ccndid;
+	size_t ccndid_size;
+	
 	struct multipath *mp;
 	char *logFile;
 	char *loggingDir;

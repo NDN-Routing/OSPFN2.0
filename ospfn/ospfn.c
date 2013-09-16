@@ -125,7 +125,10 @@ init(void)
 	{
 		perror("SIGTERM install error\n");
 		exit(1);
-	}	
+	}
+	ospfn->local_scope_template = ccn_charbuf_create();
+	unsigned char ccndid_storage[32] = {0};
+	ospfn->ccndid=ccndid_storage;	
 	ospfn->CCN_NAME_TYPE=CCN_NAME_FORMAT_URI;
 	ospfn->mp=NULL;
 }
