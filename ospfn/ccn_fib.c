@@ -49,7 +49,7 @@ ccn_fib_fatal(int lineno, const char *format, ...)
 	fprintf(stderr, "%d.%06d ccn_fib[%d]:%d: ", (int)t.tv_sec, (unsigned)t.tv_usec, (int)getpid(), lineno);
 	vfprintf(stderr, format, ap);
 	va_end(ap);
-	exit(1);
+	//exit(1);
 }
 
 #define ON_ERROR_EXIT(resval, msg) on_error_exit((resval), __LINE__, msg)
