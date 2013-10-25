@@ -90,7 +90,7 @@
 Summary: Routing daemon
 Name:		quagga
 Version:	0.99.17
-Release:	20120213%{release_rev}
+Release:	20130916%{release_rev}
 License:	GPL
 Group: System Environment/Daemons
 Source0:	http://www.quagga.net/snapshots/cvs/%{name}-%{version}.tar.gz

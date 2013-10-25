@@ -148,12 +148,24 @@ register_unregister_prefix(struct ccn *h, struct ccn_charbuf *local_scope_templa
 	return res;
 
 	cleanup:
-		ccn_forwarding_entry_destroy(&new_forwarding_entry);
-		ccn_charbuf_destroy(&signed_info);
-		ccn_charbuf_destroy(&temp);
-		ccn_charbuf_destroy(&resultbuf);
-		ccn_charbuf_destroy(&name);
-		ccn_charbuf_destroy(&prefixreg);
+		if ( new_forwarding_entry ){ 
+			ccn_forwarding_entry_destroy(&new_forwarding_entry);
+		}
+		if ( signed_info ){
+			ccn_charbuf_destroy(&signed_info);
+		}
+		if ( temp ){
+			ccn_charbuf_destroy(&temp);
+		}
+		if ( resultbuf ){
+			ccn_charbuf_destroy(&resultbuf);
+		}
+		if ( name ){
+			ccn_charbuf_destroy(&name);
+		}
+		if ( prefixreg ){
+			ccn_charbuf_destroy(&prefixreg);
+		}
 
 	return -1;
 }
@@ -214,11 +226,21 @@ struct ccn_face_instance *create_face(struct ccn *h, struct ccn_charbuf *local_s
 	return new_face_instance;
 
 	cleanup:
-		ccn_charbuf_destroy(&newface);
-		ccn_charbuf_destroy(&signed_info);
-		ccn_charbuf_destroy(&temp);
-		ccn_charbuf_destroy(&resultbuf);
-		ccn_charbuf_destroy(&name);
+		if ( newface ){
+			ccn_charbuf_destroy(&newface);
+		}
+		if ( signed_info ){
+			ccn_charbuf_destroy(&signed_info);
+		}
+		if ( temp ){
+			ccn_charbuf_destroy(&temp);
+		}
+		if ( resultbuf ){
+			ccn_charbuf_destroy(&resultbuf);
+		}
+		if ( name ){
+			ccn_charbuf_destroy(&name);
+		}
 
 	return NULL;
 }
@@ -286,8 +308,7 @@ ccn_face_instance *construct_face(const unsigned char *ccndid, size_t ccndid_siz
 	int res;
 
 	res = getaddrinfo(address, port, &hints, &raddrinfo);
-	if (res != 0 || raddrinfo == NULL) 
-	{
+	if (res != 0 || raddrinfo == NULL) {
 		fprintf(stderr, "Error: getaddrinfo\n");
 		return NULL;
 	}
@@ -297,8 +318,7 @@ ccn_face_instance *construct_face(const unsigned char *ccndid, size_t ccndid_siz
             rhostportbuf, sizeof(rhostportbuf),
             NI_NUMERICHOST | NI_NUMERICSERV);
 	freeaddrinfo(raddrinfo);	
-	if (res != 0) 
-	{
+	if (res != 0) {
 		fprintf(stderr, "Error: getnameinfo\n");
 		return NULL;
 	}
@@ -397,11 +417,19 @@ add_delete_ccn_face(struct ccn *h, const char *uri, const char *address, const u
 	return 0;
 
 	cleanup:
-		ccn_charbuf_destroy(&prefix);
+		if ( prefix ){
+			ccn_charbuf_destroy(&prefix);
+		}
 		//ccn_charbuf_destroy(&local_scope_template);
-		ccn_charbuf_destroy(&no_name);
-		ccn_face_instance_destroy(&fi);
-		ccn_face_instance_destroy(&nfi);
+		if ( no_name ){
+			ccn_charbuf_destroy(&no_name);
+		}
+		if ( fi ){
+			ccn_face_instance_destroy(&fi);
+		}
+		if ( nfi ){
+			ccn_face_instance_destroy(&nfi);
+		}
 
 	return -1;
 }
