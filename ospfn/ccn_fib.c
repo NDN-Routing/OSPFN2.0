@@ -148,22 +148,22 @@ register_unregister_prefix(struct ccn *h, struct ccn_charbuf *local_scope_templa
 	return res;
 
 	cleanup:
-		if ( new_forwarding_entry != NULL ){ 
+		if ( (new_forwarding_entry) != NULL ){ 
 			ccn_forwarding_entry_destroy(&new_forwarding_entry);
 		}
-		if ( signed_info != NULL ){
+		if ( (signed_info) != NULL ){
 			ccn_charbuf_destroy(&signed_info);
 		}
-		if ( temp !=NULL){
+		if ( (temp) !=NULL){
 			ccn_charbuf_destroy(&temp);
 		}
-		if ( resultbuf !=NULL ){
+		if ( (resultbuf) !=NULL ){
 			ccn_charbuf_destroy(&resultbuf);
 		}
-		if ( name !=NULL){
+		if ( (name) !=NULL){
 			ccn_charbuf_destroy(&name);
 		}
-		if ( prefixreg != NULL){
+		if ( (prefixreg) != NULL){
 			ccn_charbuf_destroy(&prefixreg);
 		}
 
@@ -226,19 +226,19 @@ struct ccn_face_instance *create_face(struct ccn *h, struct ccn_charbuf *local_s
 	return new_face_instance;
 
 	cleanup:
-		if ( newface != NULL){
+		if ( (newface) != NULL){
 			ccn_charbuf_destroy(&newface);
 		}
-		if ( signed_info != NULL){
+		if ( (signed_info) != NULL){
 			ccn_charbuf_destroy(&signed_info);
 		}
-		if ( temp!= NULL ){
+		if ( (temp)!= NULL ){
 			ccn_charbuf_destroy(&temp);
 		}
-		if ( resultbuf != NULL){
+		if ( (resultbuf) != NULL){
 			ccn_charbuf_destroy(&resultbuf);
 		}
-		if ( name != NULL){
+		if ( (name) != NULL){
 			ccn_charbuf_destroy(&name);
 		}
 
