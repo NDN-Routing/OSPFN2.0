@@ -94,8 +94,10 @@ register_unregister_prefix(struct ccn *h, struct ccn_charbuf *local_scope_templa
 	struct ccn_charbuf *signed_info = NULL;
 	struct ccn_charbuf *name = NULL;
 	struct ccn_charbuf *prefixreg = NULL;
-	struct ccn_parsed_ContentObject pcobuf = {0};
-	struct ccn_forwarding_entry forwarding_entry_storage = {0};
+	//struct ccn_parsed_ContentObject pcobuf = {0};
+	//struct ccn_forwarding_entry forwarding_entry_storage = {0};
+	struct ccn_parsed_ContentObject pcobuf;
+	struct ccn_forwarding_entry forwarding_entry_storage;
 	struct ccn_forwarding_entry *forwarding_entry = &forwarding_entry_storage;
 	struct ccn_forwarding_entry *new_forwarding_entry;
 	const unsigned char *ptr = NULL;
@@ -185,7 +187,8 @@ struct ccn_face_instance *create_face(struct ccn *h, struct ccn_charbuf *local_s
 	struct ccn_charbuf *temp = NULL;
 	struct ccn_charbuf *name = NULL;
 	struct ccn_charbuf *resultbuf = NULL;
-	struct ccn_parsed_ContentObject pcobuf = {0};
+	//struct ccn_parsed_ContentObject pcobuf = {0};
+	struct ccn_parsed_ContentObject pcobuf;
 	struct ccn_face_instance *new_face_instance = NULL;
 	const unsigned char *ptr = NULL;
 	size_t length = 0;
@@ -256,7 +259,8 @@ get_ccndid(struct ccn *h, struct ccn_charbuf *local_scope_template,
 {
 	struct ccn_charbuf *name = NULL;
 	struct ccn_charbuf *resultbuf = NULL;
-	struct ccn_parsed_ContentObject pcobuf = {0};
+	//struct ccn_parsed_ContentObject pcobuf = {0};
+	struct ccn_parsed_ContentObject pcobuf;
 	char ccndid_uri[] = "ccnx:/%C1.M.S.localhost/%C1.M.SRV/ccnd/KEY";
 	const unsigned char *ccndid_result;
 	static size_t ccndid_result_size;
@@ -417,17 +421,17 @@ add_delete_ccn_face(struct ccn *h, const char *uri, const char *address, const u
 	return 0;
 
 	cleanup:
-		if ( prefix != NULL){
+		if ( (prefix) != NULL){
 			ccn_charbuf_destroy(&prefix);
 		}
 		//ccn_charbuf_destroy(&local_scope_template);
-		if ( no_name != NULL){
+		if ( (no_name) != NULL){
 			ccn_charbuf_destroy(&no_name);
 		}
-		if ( fi != NULL){
+		if ( (fi) != NULL){
 			ccn_face_instance_destroy(&fi);
 		}
-		if ( nfi != NULL){
+		if ( (nfi) != NULL){
 			ccn_face_instance_destroy(&nfi);
 		}
 

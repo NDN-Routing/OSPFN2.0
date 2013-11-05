@@ -5,7 +5,7 @@
 #define _OSPFN_H_
 
 #include "thread.h"
-#include "ospfclient/ospf_apiclient.h"
+//#include "ospfclient/ospf_apiclient.h"
 #include "tables.h"
 
 #include <ccn/ccn.h>

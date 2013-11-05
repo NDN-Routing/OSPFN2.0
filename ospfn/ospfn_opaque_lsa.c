@@ -99,7 +99,7 @@ ccnx_lsa_header_dump (struct lsa_header *lsah)
 */
 
 void 
-ospf_router_lsa_print (struct router_lsa  *rl, u_int16_t length)
+ospf_router_lsa_print (struct router_lsa  *rl)
 {
    	int i, len;
    	writeLogg(ospfn->logFile,__FILE__,__FUNCTION__,__LINE__, "  Router-LSA\n");

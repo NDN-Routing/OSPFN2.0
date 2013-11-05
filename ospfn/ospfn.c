@@ -83,8 +83,7 @@ struct option longopts[] =
     { "daemon",      no_argument,       NULL, 'd'},
     { "config_file", required_argument, NULL, 'f'},
     { "help",        no_argument,       NULL, 'h'},
-    { "log",         no_argument,       NULL, 'n'},
-    { 0 }
+    { "log",         no_argument,       NULL, 'n'}
 };    
 
 
@@ -627,12 +626,12 @@ is_nexthop(char *address)
 static int 
 lsa_read (struct thread *thread)
 {
-	struct ospf_apiclient *oclient;
+	//struct ospf_apiclient *oclient;
     	int fd;
     	int ret;
 
     	writeLogg(ospfn->logFile,__FILE__,__FUNCTION__,__LINE__,"lsa_read called\n");
-    	oclient = THREAD_ARG (thread);
+    	//oclient = THREAD_ARG (thread);
     	fd = THREAD_FD (thread);
 
     	/* Handle asynchronous message */
@@ -684,7 +683,7 @@ lsa_update_callback (struct in_addr ifaddr, struct in_addr area_id,
 
     	if(lsa->type == OSPF_ROUTER_LSA)
 	{    
-		ospf_router_lsa_print((struct router_lsa *) lsa, lsa->length);
+		ospf_router_lsa_print((struct router_lsa *) lsa);
     	} 
     
 	if(lsa->type == 9 || lsa->type == 10 || lsa->type == 11)

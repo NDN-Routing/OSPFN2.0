@@ -13,7 +13,7 @@
 #include <signal.h>
 
 int 
-main(int argc, char *argv[]){
+main(){
 	FILE *fp;
 	int pid;	
 	fp=fopen(PATH_OSPFN_PID,"r");

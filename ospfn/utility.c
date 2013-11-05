@@ -122,7 +122,6 @@ startLogging(char *loggingDir)
 	char *ret;
 	char *logExt;
 	char *defaultLogDir;	
-	int status;
 	struct stat st;
 	int isLogDirExists=0;
 	char *time=getLocalTimeStamp();
@@ -165,7 +164,7 @@ startLogging(char *loggingDir)
 			memcpy(logDir,pd.pw_dir,strlen(pd.pw_dir)+1);	
 			memcpy(logDir+strlen(logDir),defaultLogDir,strlen(defaultLogDir)+1);	
 			if(stat(logDir,&st) != 0)
-				status = mkdir(logDir, S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);	
+				mkdir(logDir, S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);	
 		}
 	}	
  	memcpy(logFileName,logDir,strlen(logDir)+1);	
